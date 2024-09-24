@@ -2,6 +2,9 @@
 
 A rube-goldberg machine / telephone game thing, where you give it a message (like "banana") and it passes it to each part of the chain and then that part of the chain passes it on to the next part, and it will be glorious. I can implement each part in a different language and connect them all with webhooks.
 
+## Todo
+- first create a control server / test thing to configure parts and test parts
+
 ## Basic Design
 
 Each part of the contraption has an http server where it listens for a post request, and then upon recieving it, sends another post request. If I do this in a uniform way, then i can plug/play thing into different orders
@@ -20,11 +23,11 @@ Gotta figure out how we wanna do the "simple" steps (send webhook to discord, se
 - tts => stt out loud (mebbe raspberry pi starts it, and computer running C# listens to it?)
 - printer + text reading (any language thing (on some host computer?) sends it to printer, then esp32 reads it and passes it on)
 - ahk opens up a notepad and a message.text file, and writes it out into the file, then saves and closes notepad, and then drag-drops the file onto an app that sends it???? (or just sends it itself)
+- phone recieves text, tasker reads it and then forwards it to the next place
 
 ### Half-Ideas
 - home assistant/vaccum
 - real-world rolling ball / classic rube goldberg thing? (not sure how we'd do this for text)
-
 
 ## devices to use
 - raspberry pi
